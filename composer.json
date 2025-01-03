@@ -1,0 +1,13 @@
+{
+  "require": {
+    "php": ">=8.1",
+    "picqer/php-barcode-generator": "~v2.4.2",
+    "ext-yaml": "*",
+    "ext-imagick": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "StudioDemmys\\barcode\\": "class/"
+    }
+  }
+}

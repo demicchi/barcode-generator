@@ -1,0 +1,16 @@
+E_DEFAULT: Something wrong.
+E_HTTPKIT_CONNECTION_CLOSED: The connection seems to be already closed.
+E_HTTPKIT_STATUS_CODE_INVALID: Undefined status code.
+E_YAML_LOAD_FAILURE: Failed to load the yaml file.
+E_BARCODE_GENERATION_FAILURE: Failed to generate barcode.
+E_BAR_HEIGHT_CALCULATION: Failed to get the height of bars.
+E_NUMBER_PATH_DRAWING_FAILURE: Failed to add numbers.
+E_IMAGICK_GENERATION: Failed to generate Imagick.
+E_IMAGICK_CONVERSION: Failed to generate an image file by using Imagick.
+E_SVG_INVALID: Failed to get an SVG path.
+E_EPS_CONVERSION_FAILURE: Failed to convert an SVG path to EPS.
+E_PARAMETER_FAILURE: Failed to generate parameters.
+E_PARAMETER_CODE_INVALID: Code is invalid.
+E_PARAMETER_INTERNAL_PROBLEM: Internal error occurred while generating parameters.
+E_GENERATOR_INTERNAL_PROBLEM: Internal error occurred while generating a barcode.
+E_IMAGE_FORMAT_UNSUPPORTED: The image format is not supported.
