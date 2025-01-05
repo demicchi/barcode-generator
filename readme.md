@@ -52,6 +52,32 @@ You can use SVG or EPS format.
 ### URL Example
 `https://yourdomain/index.php?code=2054209100069&height=100&width_factor=2&numbered=1&margin=2&format=png&background=255,255,255,1&foreground=0,0,0,1&download=0`
 
+## Additional considerations
+Limit user accesses only to index.php.
+
+nginx example:
+```
+root /opt/barcode-generator;
+index index.php;
+location ~ ^/(?:(?:index)\.php|$) {
+    fastcgi_split_path_info ^(.+\.php)(.*)$;
+    fastcgi_index index.php;
+    include fastcgi_params;
+    fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+    fastcgi_param SCRIPT_NAME $fastcgi_script_name;
+    fastcgi_param PATH_INFO $fastcgi_path_info;
+    fastcgi_pass php-fpm; # Upstream here
+    fastcgi_intercept_errors on;
+    fastcgi_request_buffering off;
+}
+location ~ .* {
+    return 404;
+}
+```
+
+Also, apply logrotate to files under `/log` .
+
+
 ## License
 This program is based on [PHP Barcode Generator](https://github.com/picqer/php-barcode-generator) 
 and is therefore licensed under LGPLv3.
