@@ -6,8 +6,8 @@
 ## インストール
 PHP >= 8.1、php-yaml、php-imagick、Imagickが必要です。imagickのインストールの詳細については、
 [Config sample](config/config_sample.yml) を参照してください。
-なお、一部のLinuxディストリビューションに含まれるimagickではデフォルトでEPSが無効になっているため、
-imagickの `policy.xml` でEPSを許可する必要があるかもしれません。
+なお、一部のLinuxディストリビューションに含まれるimagickではデフォルトの `policy.xml` でEPSが無効になっていますが、
+このプログラムはimagickを使用せずにEPSを直接出力するため、EPSを有効化する必要はありません。
 
 1. このリポジトリをcloneします。
 ```

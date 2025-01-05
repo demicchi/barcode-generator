@@ -5,8 +5,8 @@ This program generates JAN13 barcode images in PNG, SVG and EPS. You can insert 
 ## Installation
 PHP >= 8.1, php-yaml, php-imagick and Imagick are required. See [Config sample](config/config_sample.yml) 
 for more information about your imagick installation.
-You may need to allow EPS in `policy.xml` of your imagick installation because imagick on some Linux distributions 
-disables EPS by default.
+You don't need to allow EPS in `policy.xml` of your imagick installation despite that imagick on some Linux distributions 
+disables EPS by default, because this program directly generates EPS on its own, not depending on imagick.
 
 1. Clone this repository.
 ```
